@@ -1,0 +1,27 @@
+$sm-breakpoint: 768px;
+$md-breakpoint: 1024px;
+$lg-breakpoint: 1286px;
+
+@mixin theme($theme: #111111b5, $colortheme: #fff){
+  background-color: $theme;
+  color: $colortheme;
+}
+
+body {    
+    @include theme($theme: #111111b5, $colortheme: #fff);
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.toggleIcon {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+body.light-mode {
+  @include theme($theme: #fff, $colortheme: #111);
+}
